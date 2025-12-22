@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Фотограф | Имя Фотографа</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Имя Фотографа</h1>
+            <nav>
+                <ul>
+                    <li><a href="#about" class="active">Обо мне</a></li>
+                    <li><a href="#works">Мои работы</a></li>
+                    <li><a href="#contact">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="about" class="section active">
+            <div class="container">
+                <h2>Обо мне</h2>
+                <div class="about-content">
+                    <img src="images/profile.jpg" alt="Фотограф" class="profile-photo">
+                    <div class="about-text">
+                        <p>Привет! Я профессиональный фотограф с X-летним опытом работы.</p>
+                        <p>Специализируюсь на портретной, свадебной и предметной фотографии. Моя цель - запечатлеть важные моменты вашей жизни и передать их эмоции через фотографии.</p>
+                        <p>Использую профессиональное оборудование и индивидуальный подход к каждому клиенту.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="works" class="section">
+            <div class="container">
+                <h2>Мои работы</h2>
+                <div class="gallery">
+                    <div class="categories">
+                        <button class="category-btn active" data-category="all">Все работы</button>
+                        <button class="category-btn" data-category="portrait">Портреты</button>
+                        <button class="category-btn" data-category="wedding">Свадьбы</button>
+                        <button class="category-btn" data-category="nature">Природа</button>
+                    </div>
+                    <div class="works-grid" id="works-container">
+                        <!-- Работы будут загружены через JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <div class="container">
+                <h2>Контакты</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <p><i class="fas fa-phone"></i> +7 (XXX) XXX-XX-XX</p>
+                        <p><i class="fas fa-envelope"></i> email@example.com</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Город, Страна</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-vk"></i></a>
+                            <a href="#"><i class="fab fa-telegram"></i></a>
+                        </div>
+                    </div>
+                    <form class="contact-form">
+                        <input type="text" placeholder="Ваше имя" required>
+                        <input type="email" placeholder="Ваш email" required>
+                        <textarea placeholder="Ваше сообщение" required></textarea>
+                        <button type="submit">Отправить</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Имя Фотографа. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+    <!-- Кнопка для открытия админ-панели -->
+<button id="admin-btn" class="admin-btn"><i class="fas fa-cog"></i></button>
+
+<!-- Админ-панель -->
+<div id="admin-panel" class="admin-panel">
+    <div class="admin-content">
+        <h3>Добавить новую работу</h3>
+        <button id="close-admin" class="close-admin">&times;</button>
+        <form id="add-work-form">
+            <div class="form-group">
+                <label for="work-title">Название работы:</label>
+                <input type="text" id="work-title" required>
+            </div>
+            <div class="form-group">
+                <label for="work-description">Описание:</label>
+                <textarea id="work-description" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="work-category">Категория:</label>
+                <select id="work-category" required>
+                    <option value="portrait">Портрет</option>
+                    <option value="wedding">Свадьба</option>
+                    <option value="nature">Природа</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="work-image">Изображение:</label>
+                <input type="file" id="work-image" accept="image/*" required>
+                <div class="image-preview" id="image-preview"></div>
+            </div>
+            <button type="submit">Добавить работу</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,10 @@
+{
+    "works": [
+        {
+            "title": "Портрет в студии",
+            "description": "Студийная съемка с профессиональным светом",
+            "image": "nya.jpg",
+            "category": "portrait"
+        }
+    ]
+}
